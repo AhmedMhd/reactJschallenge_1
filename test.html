@@ -12,16 +12,20 @@
             padding: 0px;
         }
         
+        body{
+            background-color: #F6F8FE;
+        }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            background-color: gray;
+            background-color: #F6F8FE;
         }
 
         .item-1 {
             flex-grow: 1;
             margin-left: 30px;
+            margin-right: 40px;
         }
 
         .item-0{
@@ -31,18 +35,16 @@
 
         .item-0, .item-1{
             height: 600px;
-            background-color: gray;
         }
         .item-1-left{
-            height: 170px;
-            background-color: darkgreen;
+            height: 190px;
             margin-bottom: 40px;
-            margin-left: 20px;
+            margin-left: 50px;
             margin-top: 20px;
             border: 3px solid;
             border-color: white;
             border-radius: 9px;
-            background-color: white;
+            background-image: linear-gradient(to right,blue,violet); 
         }
 
         .sub-item-1-left{
@@ -61,24 +63,23 @@
         }
 
         .sub-categories-0{
-            margin-left: 40px;
+            margin-left: 20px;
         }
         .sub-categories-0, .sub-categories-1, .sub-categories-2{
-            margin-top: 40px;
-            background-color: green;
-            margin-right: 20px;
-            background-color: lightgray;
+            margin-top: 10px;
+            margin-right: 5px;
+            background-color: #EEF5FF;
             border: 3px solid;
-            border-color: white;
+            border-color: #EEF5FF;
             border-radius: 9px;
             padding: 10px;
         }
         
         .item-0-right{
             height: 50px;
-            background-color: rgb(49, 49, 145);
+            background-color: #373F68;
             border: 3px solid;
-            border-color: rgb(49, 49, 145);
+            border-color: #373F68;
             border-radius: 9px;
             margin-top: 20px;
         }
@@ -90,6 +91,145 @@
             border: 3px solid;
             border-color: white;
             border-radius: 9px;
+        }
+
+        .item-1-right{
+            height: 142px;
+        }
+
+        .big-categories{
+            margin-top: 10px;
+        }
+
+        li{
+            width: 150px;
+        }
+
+        .table-div{
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+
+        .firsttable{
+            margin-bottom: 20px;
+        }
+
+        .firsttable-td{
+            width: 150px;
+        }
+
+        /* nav */
+
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            color: white;
+        }
+
+        .nav-item-0 {
+            order: 0;
+            flex-grow: 0;
+            margin-left: 20px;
+            margin-right: 30px;
+            margin-top: 5px;
+        }
+
+        .nav-item-1 {
+            flex-grow: 0;
+            margin-top: 12px;
+        }
+
+        .nav-item-2 {
+            flex-grow: 1;
+            margin-top: 15px;
+            margin-left: 60px;
+            direction: ltr;
+        }
+
+        .nav-item-3 {
+            flex-grow: 1;
+            direction: rtl;
+            padding-right: 20px;
+            padding-top: 7px;
+        }
+        
+        span{
+            color: #757DA1;
+        }
+
+        .add-feedback{
+            height: 35px;
+            width: 130px;
+            border: 1px solid;
+            border-radius: 8px;
+            border-color: #AA23EB;
+            background-color: #AA23EB;
+            color: white;
+        }
+
+
+        .post-div {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+
+        .post-div-item-1 {
+            order: 0;
+            flex-grow: 1;
+            height: 100%;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+
+        .post-div-item-1 h2{
+            color: black;
+        }
+
+        .post-div-item-1 p{
+            margin-top: 5px;
+            color: gray;
+        }
+
+        .num{
+            height: 50px;
+            width: 40px;
+            text-align: center;
+            padding-top: 10px;
+            background-color: #F2F5FB;
+            margin-top: 25px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .post-btn{
+            color: blue;
+            background-color: #F2F5FB;
+            margin-top: 10px;
+            width: 100px;
+            height: 25px;
+            border: 1px solid;
+            border-color: #F2F5FB;
+            border-radius: 8px;
+        }
+
+        .post-div-item-2{
+            height: 100%;
+            width: 100px;
+            text-align: center;
+            color: black;
+            padding-top: 70px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .post-div-item-2 li{
+            font-size: 45px;
+            color: rgb(159, 159, 159);
+            width: 0px;
         }
     </style>
 </head>
@@ -104,35 +244,188 @@
             </div>
 
             <div class="item-1-left">
-                <div class="categories">
-                    <div class="sub-categories-0">
-                        <p>All</p>
+                <div class="big-categories">
+                    <div class="categories">
+                        <div class="sub-categories-0">
+                            <p>All</p>
+                        </div>
+                        <div class="sub-categories-1">
+                            <p>UI</p>
+                        </div>
+                        <div class="sub-categories-2">
+                            <p>UX</p>
+                        </div>
                     </div>
-                    <div class="sub-categories-1">
-                        <p>UI</p>
+    
+                    <div class="categories">
+                        <div class="sub-categories-0">
+                            <p>Experiances</p>
+                        </div>
+                        <div class="sub-categories-1">
+                            <p>Bug</p>
+                        </div>
                     </div>
-                    <div class="sub-categories-2">
-                        <p>UX</p>
+
+                    <div class="categories">
+                        <div class="sub-categories-0">
+                            <p>Features</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="item-1-left">
-                <h1>test</h1>
+                <div class="table-div">
+                    <table class="firsttable">
+                        
+                            <ul>
+                                <tr>
+                                    <td class="firsttable-td">Roadmap</td>
+                                    <th>View</th>
+                                </tr>
+                            </ul>
+                        
+                    </table>
+                    <table>
+                        <ul>
+                            <tr>
+                                <td><li>Planned</li></td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><li>In-progress</li></td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><li>Live</li></td>
+                                <td>1</td>
+                            </tr>
+                        </ul>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="item-1">
             <div class="item-0-right">
-                
+                <div class="nav">
+                    <div class="nav-item-0">
+                        <h1>0</h1>
+                    </div>
+                    <div class="nav-item-1">
+                        <h3>6 Suggestions</h3>
+                    </div>
+                    <div class="nav-item-2">
+                        <p><span>Sort by</span> &nbsp;&nbsp;&nbsp;&nbsp;  Meet ....</p>
+                        
+                    </div>
+                    <div class="nav-item-3">
+                        <button class="add-feedback"> Add Feedback +</button>
+                    </div>
+                </div>
             </div>
 
             <div class="item-1-right">
-                
+                <div class="post-div">
+                    <div class="post-div-item-0">
+                        <div class="num">
+                            <p class="p-num">^</p>
+                            <h4>172</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="post-div-item-1">
+                        <h2>Add tags for solutions</h2>
+                        <p> Example</p>
+                        <button class="post-btn"> Exb... </button>
+                    </div>
+
+                    <div class="post-div-item-2">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <p style="font-size: 25px; margin-top: 12px;">2</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="item-2-right">
-                
+            <div class="item-1-right">
+                <div class="post-div">
+                    <div class="post-div-item-0">
+                        <div class="num">
+                            <p class="p-num">^</p>
+                            <h4>172</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="post-div-item-1">
+                        <h2>Add tags for solutions</h2>
+                        <p> Example</p>
+                        <button class="post-btn"> Exb... </button>
+                    </div>
+
+                    <div class="post-div-item-2">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <p style="font-size: 25px; margin-top: 12px;">2</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="item-1-right">
+                <div class="post-div">
+                    <div class="post-div-item-0">
+                        <div class="num">
+                            <p class="p-num">^</p>
+                            <h4>172</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="post-div-item-1">
+                        <h2>Add tags for solutions</h2>
+                        <p> Example</p>
+                        <button class="post-btn"> Exb... </button>
+                    </div>
+
+                    <div class="post-div-item-2">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <p style="font-size: 25px; margin-top: 12px;">2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-1-right">
+                <div class="post-div">
+                    <div class="post-div-item-0">
+                        <div class="num">
+                            <p class="p-num">^</p>
+                            <h4>172</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="post-div-item-1">
+                        <h2>Add tags for solutions</h2>
+                        <p> Example</p>
+                        <button class="post-btn"> Exb... </button>
+                    </div>
+
+                    <div class="post-div-item-2">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <p style="font-size: 25px; margin-top: 12px;">2</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
         </div>
     </div>
 </body>
