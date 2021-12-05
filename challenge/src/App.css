@@ -1,0 +1,17 @@
+body{
+  background-color: #f7f8fd;
+}
+.Page {
+  display: flex;
+  width: 80vw;
+  height: 80vh; 
+  justify-content: space-around;
+  margin: 60px;
+  /* align-items: space-between ; */
+}
+.Left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
