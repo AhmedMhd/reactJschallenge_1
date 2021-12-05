@@ -1,0 +1,114 @@
+.wrapper{
+     display: flex;
+    flex-direction: row;
+    padding: 5% 10%;
+    background-color: rgb(235, 233, 233);
+}
+.sideBar{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.tags ,.feedname ,.roadMap{
+margin: 4% 0px;
+padding: 6%;
+border-radius: 10px;
+}
+.feedname{
+    background-image: linear-gradient(to left top, #f1fc33, #ffc01c, #ff7e51, #ff4088, #e135ba, #c241c4, #9f4bcb, #7852cd, #9a53c2, #b358b7, #c560ad, #d16ba5);
+    color: white;  
+    padding-top:30%;
+
+}
+.tags{
+    background-color:white;
+}
+.tags button,.description button{
+    padding: 3% 6%;
+    margin: 2%;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    color: #5d2aca;
+    font-size:0.8em;
+    font-weight: bold;
+    
+}
+.roadMap{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.mapHead,.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.feedback{
+    width: 80%;
+    
+}
+.resultHeader{
+    display: flex;
+    flex-direction: row;
+    background-color:#4c20ac;
+    padding:2%;
+    width: 100%;
+    margin: 1% 4%;
+    line-height: 56px;
+    justify-content: space-between;
+    text-align: center;
+    color:white;
+    border-radius: 15px;
+}    
+.resultHeader span{
+    display: inline-flex;
+}
+h3{
+    margin: 0px;
+}
+.suggestion{
+    font-weight: bold;
+}
+.resultHeader button{
+    line-height: 40px;
+    padding: 0px 2%;
+    color: white;
+    font-size: 0.9em;
+    border: none;
+    background-color:#9f4bcb;
+    border-radius: 15px;
+}
+.resultList, .description{
+    display: flex;
+    flex-direction: column;
+}
+.result{
+    display: flex;
+    flex-direction: row; 
+    color: #290479; 
+    background-color: white;
+    padding:2%;
+    width: 100%;
+    margin: 1% 4%;
+    position: relative;
+    border-radius: 15px;
+ }
+.like , .comment{
+    display: inline-flex;
+    padding: 1% 5%;
+    font-weight: 550;
+    font-size: larger;
+    line-height: 19px;
+}
+.like{
+    display: grid;
+}
+.comment{
+    position: absolute;
+    right: 10px;
+}
+.title{
+    font-size: large;
+    font-weight: 550;
+}
