@@ -3,7 +3,8 @@ Product feedback app:
 ReactJs_Challenge_1  
 __________________________________
 
-This solution for a challenge was given by a Computiq team from link: 
+This solution for a challenge was given by a Computiq team from link:
+
 https://www.frontendmentor.io/challenges/product-feedback-app-wbvUYqjR6
 
 Brief:
