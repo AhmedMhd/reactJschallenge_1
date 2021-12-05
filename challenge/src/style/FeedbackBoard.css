@@ -1,0 +1,18 @@
+.feedbackboard-container {
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  width: 200px;
+  height: 100px;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.bold {
+  font-weight: bolder;
+}
+.white-font {
+  color: #f3f5ff;
+}

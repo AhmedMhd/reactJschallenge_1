@@ -5,10 +5,10 @@ import Roadmap from "./components/Roadmap";
 import HeaderBar from "./components/Header";
 import FeedbackGrid from "./components/Header";
 
-
 function App() {
   return (
     <div className="App">
+    <div className="Page">
       <div className="Left">
         <FeedbackBoard />
         <Types />
@@ -16,8 +16,8 @@ function App() {
       </div>
       <div className="Right">
         <HeaderBar />
-        <FeedbackGrid/>
       </div>
+    </div>
     </div>
   );
 }
