@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
             </div>
             <div> 
-                <button style={{background:'purple'}}>add feedback</button>
+                <button style={{background:'purple' ,height:'40px', borderRadius: '14px'}}>add feedback</button>
             </div>
         </div>
     )
