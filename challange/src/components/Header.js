@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div>
-            <div>
+        <div className={'headerDiv1'}>
+            <div className={'headerDiv2'}>
                 <div>
                     <h4> 6 Suggestions </h4>
                 </div>
@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
             </div>
             <div> 
-                <button>add feedback</button>
+                <button style={{background:'purple'}}>add feedback</button>
             </div>
         </div>
     )
