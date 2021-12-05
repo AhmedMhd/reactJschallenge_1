@@ -6,11 +6,11 @@ class Types extends React.Component {
     return (
       <div className="types-container">
         <span className="type white-font selected-type">All</span>
-        <span className="type white-font unselected-type">UI</span>
-        <span className="type white-font unselected-type">UX</span>
-        <span className="type white-font unselected-type">Enhancement</span>
-        <span className="type white-font unselected-type">Bug</span>
-        <span className="type white-font unselected-type">Feature</span>
+        <span className="type unselected-type">UI</span>
+        <span className="type unselected-type">UX</span>
+        <span className="type unselected-type">Enhancement</span>
+        <span className="type unselected-type">Bug</span>
+        <span className="type unselected-type">Feature</span>
       </div>
     );
   }

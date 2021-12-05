@@ -3,7 +3,7 @@ import FeedbackBoard from "./components/FeedbackBoard";
 import Types from "./components/Types";
 import Roadmap from "./components/Roadmap";
 import HeaderBar from "./components/Header";
-import FeedbackGrid from "./components/Header";
+import FeedbackGrid from "./components/FeedbackGrid";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       </div>
       <div className="Right">
         <HeaderBar />
+        <FeedbackGrid/>
       </div>
     </div>
     </div>
