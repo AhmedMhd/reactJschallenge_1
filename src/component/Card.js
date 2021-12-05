@@ -1,40 +1,32 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MapsUgcIcon from '@mui/icons-material/MapsUgc';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
-
-export default function BasicCard() {
+export default function BasicCard(props) {
     return (
+            <Card sx={{ minWidth: 275 , display: 'flex' ,padding: '1em'}}>
+                <Button variant="outlined"><KeyboardArrowUpIcon/>112</Button>
+                    <Box sx={{display: 'flex', flexDirection: 'column'}}>
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                {props.obj.title}
+                            </Typography>
+                            <Typography variant="body2">
+                                {props.obj.content}
+                            </Typography>
+                        </CardContent>
+                        <Typography variant="body2">
+                            {props.obj.feature}
+                        </Typography>
+                    </Box>
+                <MapsUgcIcon/>
+            </Card>
 
-        <Card sx={{ minWidth: 275 }}>
-            <Button variant="outlined"><KeyboardArrowUpIcon/>112</Button>
-            <CardContent>
-                <Typography variant="h5" component="div">
-                    Add tags for solutions
-                </Typography>
 
-                <Typography variant="body2">
-                    bla bla bla blbla blablablablabla bla
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-            <MapsUgcIcon/>
-        </Card>
     );
 }
