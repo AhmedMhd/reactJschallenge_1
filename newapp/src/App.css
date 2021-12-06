@@ -1,0 +1,203 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  padding-top: 80px;
+  background-color: #d1d4e0;
+  height: 100%;
+}
+.left-side {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.left-side-child {
+  width: 90%;
+
+  padding: 10px;
+  padding-left: 30px;
+  color: white;
+  height: 150px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.left-side-child:first-child {
+  background: rgb(29, 237, 253);
+  background: linear-gradient(90deg, rgba(29, 237, 253, 1) 0%, rgba(134, 24, 132, 1) 35%, rgba(252, 176, 69, 1) 81%);
+  position: relative;
+}
+.left-side-child:first-child > h4 {
+  position: absolute;
+  bottom: 35px;
+  font-size: 20px;
+}
+.left-side-child:first-child > span {
+  position: absolute;
+  bottom: 20px;
+}
+.pick-type {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 5px;
+  justify-content: left;
+}
+.pick-type > button {
+  color: white;
+  padding: 5px 5px;
+  background-color: #c1c9ee;
+
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.right-side {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.right-side-nav {
+  width: 100%;
+  background-color: #373e68;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  height: 80px;
+  border-radius: 5px;
+  align-items: center;
+}
+.right-side-parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  height: 100%;
+}
+.right-side-child {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+}
+.logo-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.sorting-text {
+  width: 50%;
+  display: flex;
+  justify-items: left;
+  gap: 15px;
+}
+.important-button {
+  color: white;
+  padding: 15px 25px;
+
+  background-color: #ab21e6;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.upvote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 15px 15px;
+
+  background-color: #c1c9ee;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.post-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+.paragraph {
+  margin-top: 0;
+}
+.post-type {
+  color: white;
+  padding: 5px;
+  width: 15%;
+  background-color: #c1c9ee;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
