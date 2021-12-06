@@ -1,19 +1,23 @@
 import './App.css';
-import Card1 from './components/Card1'
-import Card2 from './components/Card2'
-import Card3 from './components/Card3'
+import FeedBackCard from './components/FeedBackCard'
+import FeedBackBoard from './components/FeedBackBoard'
+import FilterCard from './components/FilterCard'
+import RoadMapCard from './components/RoadMapCard'
 import MenuAppBar from './components/AppBar'
 
 function App() {
   return (
     <div className="App">
       <div className="sideBar">
-      <Card1 title="Front-end mentor" body="Feedback Board"/>
-      <Card2/>
-      <Card3/>
+      <FeedBackBoard title="Front-end mentor" body="Feedback Board"/>
+      <FilterCard/>
+      <RoadMapCard/>
       </div>
       <div className="mainSection">
         <MenuAppBar />
+        <FeedBackCard/>
+        
+        <FeedBackCard/>
       </div>
     </div>
   );

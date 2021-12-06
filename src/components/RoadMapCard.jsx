@@ -26,7 +26,7 @@ createData('In-Progress', 3, 'purple'),
 createData('Live', 1, 'aqua'),
 ];
 
-export default function BasicTable() {
+export default function RoadMapCard() {
 return (
 <TableContainer component={Paper} sx={{overflowX: 'hidden'}}>
     <Table 

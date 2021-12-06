@@ -19,7 +19,7 @@ const card = (
 </React.Fragment>
 );
 
-export default function Card2() {
+export default function FilterCard() {
 return (
 
     <Box sx={{ minWidth: 275}} className="Box" >

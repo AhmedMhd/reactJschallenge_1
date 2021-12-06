@@ -3,79 +3,31 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Button from '@mui/material/Button';
+
 
 export default function MenuAppBar() {
-const [auth, setAuth] = React.useState(true);
-const [anchorEl, setAnchorEl] = React.useState(null);
 
-const handleChange = (event) => {
-setAuth(event.target.checked);
-};
-
-const handleMenu = (event) => {
-setAnchorEl(event.currentTarget);
-};
-
-const handleClose = () => {
-setAnchorEl(null);
-};
 
 return (
-<Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+<Box sx={{ marginBottom: 3 }}>
+    <AppBar position="static" sx={{  backgroundColor: '#373e68', borderRadius: 2}}>
     <Toolbar>
-        <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        aria-label="menu"
-        sx={{ mr: 2 }}
-        >
-        <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        Photos
+        <div style={{display: 'flex', justfiyContent: 'flex-start',flexDirection: 'row', alignItems: 'center' ,width: '45%'}}>
+        <EmojiObjectsIcon sx={{fontSize:24}}/>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: 3 }}>
+            6 Suggestion
         </Typography>
-        {auth && (
-        <div>
-            <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleMenu}
-            color="inherit"
-            >
-            <AccountCircle />
-            </IconButton>
-            <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
-            keepMounted
-            transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-            }}
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-            >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            </Menu>
+            <Typography>
+                <span style={{color: '#ccc'}}>Sort by:</span> Most Upvotes 
+            </Typography>
+            <KeyboardArrowDownIcon />
         </div>
-        )}
+        <div style={{width: '45%', display:'flex', justifyContent: 'flex-end', width: '55%'}}>
+            <Button style={{backgroundImage: 'linear-gradient(45deg, #000046, #FE6B8B 30%,#800080)', color: '#fff'}}>+ Add Feedback</Button>
+        </div>
     </Toolbar>
     </AppBar>
 </Box>
