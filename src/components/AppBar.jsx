@@ -6,28 +6,36 @@ import Typography from '@mui/material/Typography';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Button from '@mui/material/Button';
+import {
+    BoxStyle,
+    AppBarStyle,
+    ToolBarStyleRightSide,
+    TypographyStyle,
+    ButtonStyle,
+    IconSize,
+    SpanColor,
+    ToolBarStyleLeftSide,
+} from '../Style/AppBarStyle'
 
 
-export default function MenuAppBar() {
-
-
+export default function MenuAppBar({handleOpen}) {
 return (
-<Box sx={{ marginBottom: 3 }}>
-    <AppBar position="static" sx={{  backgroundColor: '#373e68', borderRadius: 2}}>
+<Box sx={BoxStyle}>
+    <AppBar position="static" sx={AppBarStyle}>
     <Toolbar>
-        <div style={{display: 'flex', justfiyContent: 'flex-start',flexDirection: 'row', alignItems: 'center' ,width: '45%'}}>
-        <EmojiObjectsIcon sx={{fontSize:24}}/>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: 3 }}>
-            6 Suggestion
-        </Typography>
+        <Box style={ToolBarStyleRightSide}>
+            <EmojiObjectsIcon sx={IconSize}/>
+            <Typography variant="h6" component="div" sx={TypographyStyle}>
+                6 Suggestion
+            </Typography>
             <Typography>
-                <span style={{color: '#ccc'}}>Sort by:</span> Most Upvotes 
+                <span style={SpanColor}>Sort by:</span> Most Upvotes 
             </Typography>
             <KeyboardArrowDownIcon />
-        </div>
-        <div style={{width: '45%', display:'flex', justifyContent: 'flex-end', width: '55%'}}>
-            <Button style={{backgroundImage: 'linear-gradient(45deg, #000046, #FE6B8B 30%,#800080)', color: '#fff'}}>+ Add Feedback</Button>
-        </div>
+        </Box>
+        <Box style={ToolBarStyleLeftSide}>
+            <Button onClick={handleOpen} style={ButtonStyle}>+ Add Feedback</Button>
+        </Box>
     </Toolbar>
     </AppBar>
 </Box>

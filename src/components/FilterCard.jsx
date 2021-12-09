@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import Typography from "@mui/material/Typography";
+import {TypographyStyle, ButtonStyle} from '../Style/FilterCardStyle'
+
 
 const list = [
     'All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'
@@ -10,9 +13,19 @@ const list = [
 const card = (
 <React.Fragment>
     <CardContent>
+        <Typography variant="body1" sx={TypographyStyle}>
+            Types Of Feedback:
+        </Typography>
         {
             list.map((item, index) => {
-                return <Button variant="contained" size="small" key={index} sx={{backgroundColor:'#ddd', color:'#031466', margin:'5px 10px',minWidth:'20px'}}>{item}</Button>
+                return <Button 
+                variant="contained" 
+                size="small" 
+                key={index} 
+                sx={ButtonStyle}
+                >
+                    {item}
+                </Button>
             })
         }
     </CardContent>

@@ -6,42 +6,50 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import {
+    CardContentStyle,
+    CardContentRightSide,
+    NumberOfViewes,
+    TypographyHeading,
+    TypographyBody,
+    ButtonStyle,
+    DivOfCommentStyle,
+    IconColor,
+    SpanWithIconStyle
+} from '../Style/FeedBackCardStyle'
 
 
-const card = (
-<React.Fragment>
-    <CardContent sx={{display: 'flex', justifyContent:'space-around'}}>
-    
-    <div style={{display: 'flex', justifyContent:'flex-start', width: '70%'}}>
-        <div style={{backgroundColor: '#eee', padding: 5, width: 30, height: 55,borderRadius: 5, textAlign: 'center'}}>
-            <KeyboardArrowUpIcon/>
-            <br/>
-            <span>122</span>
-        </div>
-
-        <div style={{marginLeft: 30}}>
-            <Typography variant="h6" sx={{color: '#373e68', fontWeight: 'bold'}}>
-                Add tags for solution
-            </Typography>
-            <Typography variant="body2" sx={{color: '#aaa', marginBottom: 2}}>
-                Easier to search for solution based on a specific stack.
-            </Typography>
-            <Button style={{backgroundColor: '#eee'}}>Enhanecment</Button>
-        </div>
-    </div>
-
-    <div style={{display: 'flex', justifyContent:'flex-end',alignItems: 'center',width: '30%'}}>
-        <span><ChatBubbleIcon sx={{color: '#ddd'}}/></span>
-        <span style={{fontWeight: 'bold', padding: 3}}>2</span>
-    </div>
-    </CardContent>
-</React.Fragment>
-);
-
-export default function FeedBackCard() {
+export default function FeedBackCard(props) {
 return (
     <Box >
-        <Card variant="outlined" >{card}</Card>
+        <Card variant="outlined" >
+            <React.Fragment>
+                <CardContent sx={CardContentStyle}>
+                    <Box style={CardContentRightSide}>
+                        <Box style={NumberOfViewes}>
+                            <KeyboardArrowUpIcon/>
+                            <br/>
+                            <span>{props.item.number}</span>
+                        </Box>
+
+                        <Box style={{marginLeft: 30}}>
+                            <Typography variant="h6" sx={TypographyHeading}>
+                                {props.item.title}
+                            </Typography>
+                            <Typography variant="body2" sx={TypographyBody}>
+                                {props.item.description}
+                            </Typography>
+                            <Button style={ButtonStyle}>{props.item.type.toUpperCase()}</Button>
+                        </Box>
+                    </Box>
+
+                    <Box style={DivOfCommentStyle}>
+                        <span><ChatBubbleIcon sx={IconColor}/></span>
+                        <span style={SpanWithIconStyle}>2</span>
+                    </Box>
+                </CardContent>
+            </React.Fragment>
+        </Card>
         <br/>
     </Box>
 );
